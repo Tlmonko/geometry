@@ -4,6 +4,7 @@ import sympy
 
 
 def get_basis(matrix: sympy.Matrix) -> Dict[sympy.Symbol, List[int]]:
+    matrix = matrix.rref()[0]
     shape = sympy.shape(matrix)
 
     vars = [sympy.Symbol(f'x{i}') for i in range(1, shape[1] + 1)]
@@ -17,4 +18,4 @@ def get_basis(matrix: sympy.Matrix) -> Dict[sympy.Symbol, List[int]]:
 
 
 if __name__ == '__main__':
-    print(get_basis(sympy.Matrix([[-3, -2, 2, 1, -1], [5, 4, -2, -3, 1], [-7, -5, 4, 3, -2]]).rref()[0]))
+    print(get_basis(sympy.Matrix([[-3, -2, 2, 1, -1], [5, 4, -2, -3, 1], [-7, -5, 4, 3, -2]])))
