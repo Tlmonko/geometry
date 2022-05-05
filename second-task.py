@@ -32,4 +32,5 @@ for ld_vector in ld_vectors:
             basis += coeff * Matrix(lid_vectors[i])
     basis_unite.append(basis)
 
+print('Basis of unite:')
 print(basis_unite)
