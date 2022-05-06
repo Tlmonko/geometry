@@ -18,4 +18,5 @@ def get_basis(matrix: sympy.Matrix) -> Dict[sympy.Symbol, List[int]]:
 
 
 if __name__ == '__main__':
-    print(get_basis(sympy.Matrix([[-3, -2, 2, 1, -1], [5, 4, -2, -3, 1], [-7, -5, 4, 3, -2]])))
+    print(get_basis(sympy.Matrix([[1, -1, 1, 0], [0, 1, 0, 1], [0, 3, -5, 3]])))
+    # print(get_basis(sympy.Matrix([[-3, -2, 2, 1, -1], [5, 4, -2, -3, 1], [-7, -5, 4, 3, -2]])))
